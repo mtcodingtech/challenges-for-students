@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --Blue-100: hsl(225, 100%, 94%);
+  --Blue-700: hsl(245, 75%, 52%);
+  --Blue-50: hsl(225, 100%, 98%);
+  --Gray-600: hsl(224, 23%, 55%);
+  --Blue-950: hsl(223, 47%, 23%);
+  --White: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+p, .cancel {
+  color: var(--Gray-600);
+}
+h3,
+h5 {
+  color: var(--Blue-950);
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--Blue-100);
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  @media (min-width: 768px) {
+     background-image: url("../images/pattern-background-desktop.svg");
+  }
+  .card {
+    width: 380px;
+    background-color: var(--White);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    .hero-img {
+      width: 100%;
+    }
+    .content-container {
+      padding: 2rem;
+      text-align: center;
+      h3 {
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+        font-size: 1.6rem;
+      }
+      .description {
+      }
+      .plan-container {
+        background-color: var(--Blue-50);
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        margin: 1.2rem 0;
+        align-items: center;
+        border-radius: 0.4rem;
+        .plan {
+          display: flex;
+          gap: 1rem;
+          img {
+          }
+          .plan-content {
+            h5 {
+              font-weight: 900;
+              font-size: 1rem;
+              margin-bottom: 0.2rem;
+            }
+            p {
+            }
+          }
+        }
+        a {
+          color: var(--Blue-700);
+          font-weight: 700;
+          &:hover{
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        }
+      }
+      button {
+        width: 100%;
+        background: var(--Blue-700);
+        color: var(--Blue-50);
+        border: 0;
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        box-shadow: 0 8px 20px #a7aec2;
+        margin-top: 0.8rem;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        &:hover{
+            opacity: 0.8;
+        }
+      }
+      .cancel {
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 1.8rem;
+        display: block;
+      }
+    }
+  }
+}
